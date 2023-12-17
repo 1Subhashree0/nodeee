@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 const Update = () => {
   const [book, setBook] = useState({
     title: "",
-    desc: "",
+    description: "",
     price: null,
     cover: "",
   });
@@ -44,8 +44,8 @@ const Update = () => {
       <textarea
         rows={5}
         type="text"
-        placeholder="Book desc"
-        name="desc"
+        placeholder="Book description"
+        name="description"
         onChange={handleChange}
       />
       <input

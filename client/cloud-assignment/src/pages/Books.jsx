@@ -44,13 +44,15 @@ const Books = () => {
       </tr>
     </thead>
     <tbody>
-      {books.map((book) => (
+      
+    {
+      books.map((book) => (
         <tr key={book.id} className="bookRow">
           {/* <td>
             <img src={book.cover} alt="" />
           </td> */}
           <td>{book.title}</td>
-          <td>{book.desc}</td>
+          <td>{book.description}</td>
           <td>${book.price}</td>
           <td>
             <button className="delete" onClick={() => handleDelete(book.id)}>

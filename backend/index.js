@@ -31,11 +31,11 @@ const db = mysql.createConnection({
   });
 
   app.post("/books", (req, res) => {
-    const q = "INSERT INTO books(`title`, `desc`,`price`, `cover`) VALUES (?)";
+    const q = "INSERT INTO books(`title`, `description`,`price`, `cover`) VALUES (?)";
   
     const values = [
       req.body.title,
-      req.body.desc,
+      req.body.description,
       req.body.price,
       req.body.cover,
     ];
@@ -58,11 +58,11 @@ const db = mysql.createConnection({
   
   app.put("/books/:id", (req, res) => {
     const bookId = req.params.id;
-    const q = "UPDATE books SET `title`= ?, `desc`= ?, `price`= ?, `cover`= ? WHERE id = ?";
+    const q = "UPDATE books SET `title`= ?, `description`= ?, `price`= ?, `cover`= ? WHERE id = ?";
   
     const values = [
       req.body.title,
-      req.body.desc,
+      req.body.description,
       req.body.price,
       req.body.cover,
     ];
